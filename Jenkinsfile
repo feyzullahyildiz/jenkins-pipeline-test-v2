@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t feyzullahyildiz/test-nodejsapp ./nodejs'
+                dir("nodejs") {
+                    sh 'docker build -t feyzullahyildiz/test-nodejsapp .'
+                }
             }
         }
         stage('Push') {
