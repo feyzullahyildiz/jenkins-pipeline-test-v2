@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t feyzullahyildiz/test-nodejsapp .'
+                sh 'docker build -t feyzullahyildiz/test-nodejsapp ./nodejs'
             }
         }
         stage('Push') {
